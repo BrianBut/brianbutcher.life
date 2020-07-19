@@ -46,7 +46,7 @@ I AM HERE ABANDONING THIS STORY. THERE ARE TOO MANY STRANDS. SOME STRANDS ARE DI
  
 2. *GIUSEPPE COCCONI & PHILIP MORRISON. Searching for Interstellar Communications, Nature volume 184, pages844–846(1959)*
 
-3. *I came across this professor. An Afrikaaner, he cut the coax cable supplying the computer science department in order to speed up the maths department computers. He was in favour if a Boer 'homeland', independent of Mandela's South Africa. I believe it more likely he shunned Phil out of anti-English sentiment.*
+3. *I came across this professor. An Afrikaaner, he cut the coax cable supplying the computer science department in order to speed up the maths department computers. He was in favour of a Boer 'homeland', independent of Mandela's South Africa. I believe it more likely he shunned Phil out of anti-English sentiment.*
 
 4.  *It could be that African students and staff did not come to Dr Morrison's Lecture because disabled or sick people are kept away the public eye at home. Phil had developed Polio in early childhood.*
 
