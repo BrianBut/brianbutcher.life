@@ -1,0 +1,32 @@
+---
+layout: bodb
+---
+
+<div class="w3-container">
+  <h1>{{ page.title }} 
+    <small>(<em>{{ page.genus }} {{ page.species }}</em>)</small>
+  </h1>
+  
+  {% if page.aka %}
+    <h2>aka: {{ page.aka }}</h2>
+  {% endif %}
+
+  {% assign imcount = 0 %}
+  {% for imno in page.imagelist %}
+    {% assign imcount = imcount | plus: 1 %}
+    {% assign lflag = imcount | modulo:3 %}
+    {% if lflag == 1 %}
+      </div> 
+      <div class="w3-row w3-margin">
+    {% endif %}
+    <div class="w3-third w3-container">
+      <img id="img{{ imno }}" src="/images/birdsofdb/{{ page.title | replace: ' ', '_' }}/{{ page.title | replace: ' ', '_' }}{{ imno }}.jpg" class="w3-image" style="height:300px;">
+    </div>
+  {% endfor %}
+  </div>
+  {% if page.size %}
+    <div style="text-indent: 10%"><p>Size: {{ page.size }}</div>
+  {% endif %}
+  
+   {{ content }}
+
