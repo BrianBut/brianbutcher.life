@@ -5,9 +5,22 @@ genus: Buteo
 species: Augur
 size: 48-55cm.
 published: true
-imagelist: [1,2,3]
+imagestr:  | 
+  1$This succesful hunter is in Debre Berhan College campus.,
+  2,
+  3,
+  9$A dark morph. This birds partner appeared to be a the more common light morph.,
+  5,
+  6$Pursued by a Cape Crow. I have also seen it pursued by a kestrel, and (mountain?) buzzard.
 ---
 
+
+
+
+
+
+
+<!--
 This succesful hunter is in Debre Berhan College campus.
 
   <div class="w3-row w3-margin">
@@ -28,3 +41,4 @@ A dark morph. This birds partner appeared to be a the more common light morph.
   </div>
 
 Pursued by a Cape Crow. I have also seen it pursued by a kestrel, and (mountain?) buzzard.
+-->

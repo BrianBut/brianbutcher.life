@@ -10,23 +10,44 @@ layout: bodb
   {% if page.aka %}
     <h2>aka: {{ page.aka }}</h2>
   {% endif %}
-
-  {% assign imcount = 0 %}
-  {% for imno in page.imagelist %}
-    {% assign imcount = imcount | plus: 1 %}
-    {% assign lflag = imcount | modulo:3 %}
-    {% if lflag == 1 %}
-      </div> 
-      <div class="w3-row w3-margin">
-    {% endif %}
-    <div class="w3-third w3-container">
-      <img id="img{{ imno }}" src="/images/birdsofdb/{{ page.title | replace: ' ', '_' }}/{{ page.title | replace: ' ', '_' }}{{ imno }}.jpg" class="w3-image" style="height:300px;">
-    </div>
-  {% endfor %}
   </div>
+
   {% if page.size %}
     <div style="text-indent: 10%"><p>Size: {{ page.size }}</div>
   {% endif %}
-  
-   {{ content }}
+
+  {% if page.imagelist %}
+    {% assign imcount = 0 %}
+    {% for imno in page.imagelist %}
+      {% assign imcount = imcount | plus: 1 %}
+      {% assign lflag = imcount | modulo:3 %}
+      {% if lflag == 1 %}
+        <div class="w3-row w3-margin">
+      {% endif %}
+      <div class="w3-third w3-container">
+        <img id="img{{ imno }}" src="/images/birdsofdb/{{ page.title | replace: ' ', '_' }}/{{ page.title | replace: ' ', '_' }}{{ imno }}.jpg" class="w3-image" style="height:300px;">
+      </div>
+    {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if page.imagestr %}
+    {% assign imgitems = page.imagestr | split: "," %}
+    {% assign lflag = 0 %}
+    {% for line in imgitems %}
+      {% assign birdline = line | split: "$" %}
+      {% if birdline[1] %}
+        {% if lflag %}
+        </div>
+        {% endif %}
+        <h4> {{ birdline[1] }}</h4>
+        <div class="w3-row w3-margin">
+      {% endif %}
+          <div class="w3-third w3-container">
+            <img id="img{{ imno }}" src="/images/birdsofdb/{{ page.title | replace: ' ', '_' }}/{{ page.title | replace: ' ', '_' }}{{ birdline[0] }}.jpg" class="w3-image" style="height:300px;">
+          </div>
+    {% endfor %}
+  {% endif %}
+
+  {{ content }}
 
