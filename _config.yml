@@ -17,12 +17,14 @@ collections:
     output: true
   spacetime:
     output: false
+  essays:
+    output: true
+  experimental:
+    output: true
   birdsofdb:
     output: true
   bird-classification:
     output: true
-  experimental:
-    output: false
 
 # Build settings
 markdown: kramdown
